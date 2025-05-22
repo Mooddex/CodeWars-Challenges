@@ -22,3 +22,11 @@ function dnaStrand(dna){
   
   
 }
+function getMiddle(str){
+   let count = str.length/2
+  if(str.length %2 ===0){
+  return str[count-1]+str[count]
+  }else{
+    return str[Math.floor(str.length / 2)]
+  }
+}
