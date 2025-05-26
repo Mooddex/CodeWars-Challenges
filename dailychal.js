@@ -22,6 +22,7 @@ function dnaStrand(dna){
   
   
 }
+//--------------------------------------------------
 function getMiddle(str){
    let count = str.length/2
   if(str.length %2 ===0){
@@ -30,7 +31,7 @@ function getMiddle(str){
     return str[Math.floor(str.length / 2)]
   }
 }
-
+//-------------------------------------------------------------
 function dnaStrand(dna){
  return dna.split('').map((l) =>{
     if(l==='A')  return 'T' 
@@ -41,7 +42,7 @@ function dnaStrand(dna){
   
   
 }
-
+//--------------------------------------------------------------------------
 function frame(balls) {
   if (/W/.test(balls)) return 'Foul'
   let score = 0
@@ -52,7 +53,7 @@ function frame(balls) {
   if (score > 147) return 'invalid data'
   return score
 }
-
+//-------------------------------------------
 //https://www.codewars.com/kata/514b92a657cdc65150000006/solutions/javascript
 function solution(number) {
   if (number <= 0) return 0;
@@ -67,7 +68,7 @@ function solution(number) {
   return sum;
 }
 
-
+//--------------------------------------------------------
 function wave(str) {
   let final = [];
   
@@ -81,3 +82,40 @@ function wave(str) {
   }
   return final ;
   }
+
+//=====================================================================
+  function sumTwoSmallestNumbers(numbers) {  
+  // Code here
+ let newArr = numbers.slice().sort((a, b) => a - b);
+  let total = newArr[0]+ newArr[1];
+  return total
+}
+
+// ---------------------------------------------------------
+function createPhoneNumber(numbers){
+  return `(${numbers[0]}${numbers[1]}${numbers[2]}) ${numbers[3]}${numbers[4]}${numbers[5]}-${numbers[6]}${numbers[7]}${numbers[8]}${numbers[9]}`
+}
+//----------------------------------------------------------
+// another solution 
+function createPhoneNumber(numbers){
+  var format = "(xxx) xxx-xxxx";
+  
+  for(var i = 0; i < numbers.length; i++)
+  {
+    format = format.replace('x', numbers[i]);
+  }
+  
+  return format;
+}
+// ------------------
+function insertDash(num) {
+   //code me
+return  num.toString().split('').map((n , i , arr)=>
+  n  %2 && arr[i+1]%2 ?   n+ '-':  n ).join('')
+}
+//------------------------------------------- 
+function positiveSum(arr) {
+ return arr.filter(n=>n>=0).reduce((acc,c) => acc+=c ,0 )
+      
+}
+//----------------------------
