@@ -66,3 +66,18 @@ function solution(number) {
 
   return sum;
 }
+
+
+function wave(str) {
+  let final = [];
+  
+  for(i = 0 ; i < str.length ; i++ ){
+    if (str[i] === ' ') continue ;
+    
+    let char = str.split('')
+    char[i] = char[i].toUpperCase();;
+    final.push (char.join(''))
+    
+  }
+  return final ;
+  }
