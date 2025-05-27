@@ -119,3 +119,9 @@ function positiveSum(arr) {
       
 }
 //----------------------------
+var capitals = function (word) {
+	// Write your code here
+return  word.split('').map((c ,i)=> c===c.toUpperCase() ? i : -1)
+  .filter((i)=> i!==-1 ) ;
+};
+// -----------------------------
