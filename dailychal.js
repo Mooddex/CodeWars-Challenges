@@ -125,3 +125,7 @@ return  word.split('').map((c ,i)=> c===c.toUpperCase() ? i : -1)
   .filter((i)=> i!==-1 ) ;
 };
 // -----------------------------
+function toNumberArray(stringarray){
+return  stringarray.map( (a , i)=> Number(a) )
+}
+// -------------------------------------
