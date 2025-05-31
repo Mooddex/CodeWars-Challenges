@@ -1,3 +1,42 @@
+
+//-----------------------------------------
+function frame(balls) {
+  const blz = { R: 1, Y: 2, G: 3, Bn: 4, Be: 5, P: 6, Bk: 7 };
+
+  if (balls.includes("W")) return "Foul";
+
+  let i = 0;
+  let score = 0;
+
+  while (i < balls.length) {
+    let color = '';
+
+    if (i + 1 < balls.length && blz[balls.slice(i, i + 2)]) {
+      color = balls.slice(i, i + 2);
+      i += 2;
+    } 
+    else if (blz[balls[i]]) {
+      color = balls[i];
+      i += 1;
+    } 
+    else {
+      i += 1;
+      continue;
+    }
+    let countStr = '';
+    while (i < balls.length && !isNaN(balls[i])) {
+      countStr += balls[i];
+      i++;
+    }
+
+    let count = countStr ? parseInt(countStr) : 1;
+    score += blz[color] * count;
+  }
+
+  return score > 147 ? 'invalid data' : score;
+}
+
+
 //Implement a function that adds two numbers together and returns their sum in binary. The conversion can be done before, or after the addition.
 //The binary number returned should be a string.
  let addBinary =  (a,b)=>(a+b).toString(2) 
