@@ -1,3 +1,17 @@
+function duplicateEncode(word){
+  word = word.toLowerCase()
+ return word.split('').map((c, _, arr)=>{
+    return arr.filter(x=> x===c ).length >1 ? ')':'(' ;
+}).join('') 
+}  
+
+
+// get the word
+//divide it 
+//find out if the car is reapeted
+//replace withh ) if it is not
+//replace with ) if it is (compare it with each eleminte in the array)
+//out a new str with )( only
 
 //-----------------------------------------
 function frame(balls) {
