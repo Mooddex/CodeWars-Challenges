@@ -1,3 +1,20 @@
+function validateBase(num, base) {
+  return num.toUpperCase().split('').every(char => {
+    let value;
+    if (char >= '0' && char <= '9') {
+      value = parseInt(char, 10);
+    }
+    else if (char >= 'A' && char <= 'Z') {
+      value = char.charCodeAt(0) - 'A'.charCodeAt(0) + 10;
+    }
+    else {
+      return false;
+    }
+    return value < base;
+  });
+}
+
+//----------------------------------------------
 function duplicateEncode(word){
   word = word.toLowerCase()
  return word.split('').map((c, _, arr)=>{
