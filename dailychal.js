@@ -1,3 +1,33 @@
+
+//----------------------------------
+function likes(names) {
+  // TODO
+  let newSen ;
+  if(names.length===0){
+    return 'no one likes this'
+  }else if(names.length===1){
+    return `${names[0]} likes this`
+  }else if(names.length===2){
+    return `${names[0]} and ${names[1]} like this`
+  }else if(names.length===3){
+    return `${names[0]}, ${names[1]} and ${names[2]} like this`
+  }else if(names.length>3){
+    return `${names[0]}, ${names[1]} and ${names.length-2} others like this`
+    }
+}
+//----------------------------------------
+const sentence = "The quick brown fox jumps over the lazy dog.";
+
+const index = 4;
+
+console.log(
+  `Character code ${sentence.charCodeAt(index)} is equal to ${sentence.charAt(
+    index,
+  )}`,
+);
+// Expected output: "Character code 113 is equal to q"
+
+// -------------------
 function validateBase(num, base) {
   return num.toUpperCase().split('').every(char => {
     let value;
