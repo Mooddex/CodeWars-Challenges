@@ -1,4 +1,6 @@
-
+function createPhoneNumber(numbers){
+  return `(${numbers[0]}${numbers[1]}${numbers[2]}) ${numbers[3]}${numbers[4]}${numbers[5]}-${numbers[6]}${numbers[7]}${numbers[8]}${numbers[9]}`
+}
 //--------------
 function arrayDiff(a, b) {
   return a.filter(n => !b.includes(n));
@@ -102,8 +104,8 @@ function frame(balls) {
 }
 
 
-//Implement a function that adds two numbers together and returns their sum in binary. The conversion can be done before, or after the addition.
-//The binary number returned should be a string.
+// Implement a function that adds two numbers together and returns their sum in binary. The conversion can be done before, or after the addition.
+// The binary number returned should be a string.
  let addBinary =  (a,b)=>(a+b).toString(2) 
 
 //  If you want to know more: http://en.wikipedia.org/wiki/DNA
