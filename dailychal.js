@@ -1,5 +1,21 @@
-function createPhoneNumber(numbers){
-  return `(${numbers[0]}${numbers[1]}${numbers[2]}) ${numbers[3]}${numbers[4]}${numbers[5]}-${numbers[6]}${numbers[7]}${numbers[8]}${numbers[9]}`
+
+//-----------------
+function alphabetPosition(text) {
+  return text 
+  .toLowerCase()
+  .split('')
+  .filter(c => c >= ('a') && c <= ('z') )
+  .map(c => c.charCodeAt(0)-96 )
+  .join(' ')
+}
+//--------------------
+function spinWords(string){
+  //TODO Have fun :)
+
+return  string
+  .split(' ')
+  .map( ( e )=> e.length >= 5? e.split('').reverse().join('') :  e )
+  .join(' ')
 }
 //--------------
 function arrayDiff(a, b) {
