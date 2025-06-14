@@ -1,4 +1,13 @@
 
+//--------------
+function noSpace(x){
+return x.split(' ').join('')
+}
+//-----------
+function numberToString(num) {
+  // Return a string of the number here!
+  return num+''
+}
 //-----------------
 function alphabetPosition(text) {
   return text 
