@@ -1,6 +1,26 @@
 
-
-
+//----------------
+function tribonacci(signature,n){
+  //your code here
+  if(n<=3){ return signature.slice(0,n) };
+  let result = [...signature] ;
+  
+  for ( i=3 ; i<n ; i++ ){
+    let next = result[i - 1] + result[i - 2] + result[i - 3];
+    result.push(next);
+  }
+    return result ;
+  
+}
+//--------
+const binaryArrayToNumber = arr => {
+  // your code
+  return arr.reduce( (sum , cur)  => sum*2 + cur ,0 ) ;
+};
+//------
+function maps(x){
+ return x.map( (e) => e*2 )
+}
 //--------
 function getCount(str) {
   return str
