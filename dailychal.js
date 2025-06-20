@@ -1,4 +1,11 @@
-
+//---------------
+function highAndLow(numbers){
+  // ...
+  let nNumbers = numbers.split(" ").map(Number)
+ let highest = Math.max(...nNumbers)
+ let lowest= Math.min(...nNumbers)
+ return `${highest} ${lowest}`;
+}
 //----------------
 function tribonacci(signature,n){
   //your code here
