@@ -1,3 +1,8 @@
+//------
+function opposite(number) {
+  //your code here
+return -number
+}
 //---------------
 function highAndLow(numbers){
   // ...
