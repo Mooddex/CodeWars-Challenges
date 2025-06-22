@@ -1,5 +1,17 @@
 
 
+
+//-----------
+function oddOrEven(array) {
+   //enter code here
+if (array.length===0) {return "even"}
+else{
+let total= array.reduce((c,s)=>c+=s)
+return total %2===0?"even": "odd"
+
+}
+
+}
 //-----------
 function order(words){
   
