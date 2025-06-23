@@ -1,6 +1,10 @@
 
 
 
+//------
+function findUniq(arr) {
+  return arr.find(n => arr.indexOf(n) === arr.lastIndexOf(n));
+}
 //-----------
 function oddOrEven(array) {
    //enter code here
