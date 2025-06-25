@@ -1,4 +1,8 @@
 
+//---------
+function minMax(arr) {
+  return [Math.min(...arr), Math.max(...arr)];
+}
 //----------------
 function tribonacci(signature,n){
   //your code here
