@@ -1,7 +1,46 @@
 
+<<<<<<< HEAD
 //---------
 function minMax(arr) {
   return [Math.min(...arr), Math.max(...arr)];
+=======
+
+
+//------
+function findUniq(arr) {
+  return arr.find(n => arr.indexOf(n) === arr.lastIndexOf(n));
+}
+//-----------
+function oddOrEven(array) {
+   //enter code here
+if (array.length===0) {return "even"}
+else{
+let total= array.reduce((c,s)=>c+=s)
+return total %2===0?"even": "odd"
+
+}
+
+}
+//-----------
+function order(words){
+  
+  return words.split(' ').sort(function(a, b){
+      return a.match(/\d/) - b.match(/\d/);
+   }).join(' ');
+}    
+//------
+function opposite(number) {
+  //your code here
+return -number
+}
+//---------------
+function highAndLow(numbers){
+  // ...
+  let nNumbers = numbers.split(" ").map(Number)
+ let highest = Math.max(...nNumbers)
+ let lowest= Math.min(...nNumbers)
+ return `${highest} ${lowest}`;
+>>>>>>> 3166baaca0436b38a5fb3e13b54eab8d76d963ad
 }
 //----------------
 function tribonacci(signature,n){
