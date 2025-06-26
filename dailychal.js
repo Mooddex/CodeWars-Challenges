@@ -1,4 +1,9 @@
 
+//--------
+function solution(str) {
+  return str.replace(/([A-Z])/g, ' $1');
+}
+
 //---------
 function minMax(arr) {
   return [Math.min(...arr), Math.max(...arr)];
