@@ -1,4 +1,15 @@
 
+//----------------
+function bingo(ticket, win) {
+  let miniWins = 0;
+  for (let [str, code] of ticket) {
+    if (str.split('').some(char => char.charCodeAt(0) === code)) {
+      miniWins++;
+    }
+  }
+  return miniWins >= win ? 'Winner!' : 'Loser!';
+}
+
 //--------
 function solution(str) {
   return str.replace(/([A-Z])/g, ' $1');
