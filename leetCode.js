@@ -1,5 +1,17 @@
+var removeElement = function(nums, val) {
+    let i = 0; // مكان الكتابة
 
-//--------------
+    for (let j = 0; j < nums.length; j++) {
+        if (nums[j] !== val) {
+            nums[i] = nums[j]; // انسخ القيمة للمكان الجديد
+            i++;               // زوّد مكان الكتابة
+        }
+    }
+
+    return i; // عدد العناصر المتبقية
+};
+
+//--------//--------------
 var removeDuplicates = function(nums) {
     if (nums.length === 0) return 0;
 
