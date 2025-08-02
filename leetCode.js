@@ -1,3 +1,7 @@
+function findUniq(arr) {
+  return arr.find(n => arr.indexOf(n) === arr.lastIndexOf(n));
+}
+//-------------
 var searchInsert = function(nums, target) {
     let left = 0, right = nums.length - 1;
 
