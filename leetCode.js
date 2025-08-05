@@ -1,4 +1,12 @@
-
+var bingo =function (ticket, win) {
+  let miniWins = 0;
+  for (let [str, code] of ticket) {
+    if (str.split('').some(char => char.charCodeAt(0) === code)) {
+      miniWins++;
+    }
+  }
+  return miniWins >= win ? 'Winner!' : 'Loser!';
+}
 //-------------
 var searchInsert = function(nums, target) {
     let left = 0, right = nums.length - 1;
