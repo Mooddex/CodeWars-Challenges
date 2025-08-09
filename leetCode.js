@@ -1,4 +1,18 @@
 
+//--------
+var merge = function(nums1, m, nums2, n) {
+    // Remove the zeros from nums1 
+    nums1.splice(m, nums1.length - m);
+
+    // Add all elements from nums2
+    for (let num of nums2) {
+        nums1.push(num);
+    }
+
+    // Sort nums1 in ascending order
+    nums1.sort((a, b) => a - b);
+};
+//--------
 var plusOne = function(digits) {
     for (let i = digits.length - 1; i >= 0; i--) {
         if (digits[i] < 9) {
